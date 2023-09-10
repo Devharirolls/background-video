@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Developer Universe</title>
+    <script>
+        function toggleMenu() {
+    const menuToggle = document.querySelector('.toggle');
+    const banner = document.querySelector('.banner');
+    const iconName = menuToggle.getAttribute('name');
+
+    if (iconName === 'menu-outline') {
+        menuToggle.setAttribute('name', 'close-outline');
+    } else {
+        menuToggle.setAttribute('name', 'menu-outline');
+    }
+
+    menuToggle.classList.toggle('active');
+    banner.classList.toggle('active');
+}
+
+    </script>
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li><a href="#" onclick="toggleMenu()">Home</a></li>
+            <li><a href="#" onclick="toggleMenu()">About</a></li>
+            <li><a href="#" onclick="toggleMenu()">Team</a></li>
+            <li><a href="#" onclick="toggleMenu()">Course</a></li>
+            <li><a href="#" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+    </div>
+    <section class="banner">
+        <header>
+            <h2 class="logo">JH-DEV.</h2>
+            <div><ion-icon class="toggle" onclick="toggleMenu()" name="menu-outline"></ion-icon></div>
+        </header>
+        <video src="assets/star.mp4" muted loop autoplay></video>
+        <div class="text">
+            <h2>Developer Universe</h2>
+            <h3>To Infinity and Beyond</h3>
+            <p>
+                A Developer is a set of computer science activities dedicated to the process of creating, designing, deploying and supporting software.
+                Researching and designing new software systems, websites, programs, and applications. 
+                Writing and implementing, clean, scalable code. Troubleshooting and debugging code.
+                Verifying and deploying software systems.
+            </p>
+            <a href="#">Find More</a>
+        </div>
+        <ul class="social">
+            <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+        </ul>
+    </section>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
